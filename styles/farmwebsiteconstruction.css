@@ -1,0 +1,550 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size:16px;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size:3rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76);
+}
+h2{
+    font-size:3rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76);
+}
+h3 h4 {
+    font-size:1.25rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p {
+    font-size:1.1rem;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    background-color:rgb(255, 255, 255);
+}
+.navbar img{
+    float:left;
+    width:4rem;
+    height:7.1rem;
+    filter:drop-shadow(0 5px 5px rgba(0, 0, 0, 0.795))
+}
+
+.navbar ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    text-align:center;
+    background-color:rgb(255, 255, 255);
+}
+
+.navbar li {
+    float:right;
+    color:rgb(0, 0, 0);
+    text-align:center;
+    padding:1rem 5%;
+    text-decoration: none;
+}
+.navbar li a {
+    text-decoration:none;
+    color:rgb(0, 0, 0);
+}
+.navbar li a:hover{
+    color:rgba(94, 54, 2, 0.76);
+    font-weight: 800;
+}
+
+main {
+    background-image:url('../images/homepage/backgroundtexture.jfif');
+    background-repeat: repeat;
+}
+
+/*HOMEPAGE*/
+
+
+.container1 {
+    width:95%;
+    height:600px;
+    overflow:hidden;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    display:flex;
+    background-image: url('../images/homepage/sheep.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hometop{
+    margin:0 auto;
+    max-width:40%;
+    min-width:30%;
+}
+
+.hometop h2{
+    color:rgb(255, 255, 255);
+    text-align:center;
+    text-transform: capitalize;
+}
+
+.hometop button{
+    color:rgb(255, 255, 255);
+    background-color:rgb(156, 231, 149);
+    margin:1rem auto;
+    padding:0.5rem 0;
+    max-width:20%;
+    min-width:15%;
+    text-align:center;
+    border:none;
+    font-family:'Source Sans Pro', sans-serif, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight:bold;
+}
+
+.hometop button a{
+    text-decoration: none;
+    color:black;
+}
+
+
+.enterprisecolumn img{
+    padding:10px 0;
+    margin:0 auto;
+    max-width:100%;
+    height:100%;
+    border-radius:50%;
+}
+
+.enterprisecolumn h2 {
+    text-align:center;
+    margin-top:5%;
+    text-transform: capitalize;
+}
+
+.enterprisecolumn h3{
+    text-transform:capitalize;
+    font-weight: bold;
+    padding-bottom:2%;
+}
+
+.enterprisecolumn a{
+    text-decoration: none;
+    color: black;
+}
+
+.enterprisecolumn button{
+    float:left;
+    width:25%;
+    margin:4% 4.1%;
+    text-align:center;
+    border:none;
+    background-color: rgba(0,0,0,0);
+}
+
+.enterprisecolumn button:hover{
+    -webkit-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    transform:scale(1.05);
+}
+
+.enterprisecolumn p{
+    color:black;
+    font-weight:bold;
+    padding-top:2%;
+}
+
+.aboutus {
+    clear:left;
+    background-color:rgb(230, 245, 220);
+    margin-top:5%;
+    padding:5%;
+    padding-bottom:10%;
+}
+
+.container2 {
+    position:relative;
+    margin:0 auto;
+    max-width:100%;
+}
+
+.container2 img {
+    width:100%;
+    height:100%;
+    border-radius:2px;
+}
+
+.aboutustext{
+    position:relative;
+    background-color: white;
+    max-width:80%;
+    min-width:250px;
+    max-height:600px;
+    min-height:300px;
+    margin:0 auto;
+    margin-top:-10%;
+    z-index: 5;
+    padding:1%;
+    overflow: scroll;
+    box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.6);
+}
+
+.aboutustext h2{
+    padding-bottom:1%;
+}
+
+.gallery{
+    background-color:rgba(207, 248, 185, 0);
+    padding:2%;
+    text-align:center;
+    color:rgba(94, 54, 2, 0.76);
+}
+
+.gallery h2 {
+    padding:2%;
+}
+
+.galleryrow{
+    display:flex;
+    flex-wrap:wrap;
+    margin:0 10%;
+    height:80rem;
+    overflow:scroll;
+}
+.gallerycol{
+    flex:50%;
+}
+.gallerycol img{
+    margin-top:2%;
+    vertical-align:middle;
+    max-width:100%;
+}
+.gallerycol img:first-child{
+    margin-top:0%;
+}
+
+
+/*FARMING SUSTAINABLY*/
+
+.container3 {
+    position:static;
+    width:100%;
+    height:1000px;
+    overflow:scroll;
+    display:flex;
+    background-image: url('../images/farmingsus/bwmus.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.wfs {
+    clear:right;
+    float:left;
+    width:40%;
+    margin:4% 0 0 10%;
+    background-color: white;
+    border-radius:5px;
+    padding:5px;
+}
+
+.wfs h3{
+    font-size:2rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76)
+}
+
+.wra {
+    clear:left;
+    float:right;
+    width:40%;
+    margin:15% 4% 10% 0;
+    background-color: white;
+    border-radius:5px;
+    padding:5px;
+}
+
+.wra h3{
+    font-size:2rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76)
+}
+
+.regenlist h2{
+    text-transform: capitalize;
+    text-align:center;
+    margin:5% 0;
+}
+
+.covercrops {
+    max-height:1000px;
+    min-height:692px;
+    background-color: rgba(181, 240, 163, 0.425);
+}
+
+.covercrops img {
+    float:left;
+    height:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:1% 1%;
+}
+
+.covercropstext {
+    min-height:17.5%;
+    max-height:70%;
+    width:50%;
+    position:absolute;
+    left:48%;
+    margin-top:20%;
+    background-color: rgb(255, 255, 255);
+    padding:15px;
+    overflow:scroll;
+}
+
+.covercrops h3{
+    padding-bottom:10px;
+    font-size:2rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76)
+}
+
+.mintill {
+    max-height:1000px;
+    min-height:692px;
+    background-color: rgba(143, 233, 118, 0.425);
+}
+
+.mintill img{
+    float:right;
+    height:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:1% 1%;
+}
+
+.mintilltext {
+    min-height:17.5%;
+    max-height:70%;
+    width:50%;
+    position:absolute;
+    right:48%;
+    margin-top:20%;
+    background-color: rgb(255, 255, 255);
+    padding:15px;
+    overflow:scroll;
+}
+
+.mintill h3 {
+    padding-bottom:10px;
+    font-size:2rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76)
+}
+
+.livint {
+    max-height:1000px;
+    min-height:692px;
+    background-color: rgba(105, 218, 83, 0.425);
+}
+
+.livint img{
+    float:left;
+    height:100%;
+    max-width:100%;
+    overflow:hidden;
+    padding:1% 1%;
+}
+
+.livinttext {
+    min-height:17.5%;
+    max-height:70%;
+    width:50%;
+    position:absolute;
+    left:48%;
+    margin-top:20%;
+    background-color: rgb(255, 255, 255);
+    padding:15px;
+    overflow:scroll;
+}
+
+.livint h3 {
+    padding-bottom:10px;
+    font-size:2rem;
+    font-family: 'Amatic SC', cursive;
+    color:rgba(94, 54, 2, 0.76)
+}
+
+
+/*OUR PRODUCE*/
+ .ourproduce {
+    padding:0.1%;
+ }
+
+.ourproduce ul {
+    text-align: center;
+    margin:5% auto;
+    width:80%;
+}
+
+.ourproduce li {
+    display: inline-block;
+}
+
+.ourproduce img {
+    max-width:100%;
+    height:100%;
+    margin-bottom:10%;
+}
+
+.lambs{
+    margin:0 5%;
+    padding-bottom:0.5%;
+}
+
+.lambs h2{
+    margin-bottom:10px;
+}
+
+.lambs a{
+    text-decoration: none;
+}
+
+.lambs img:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px black;
+}
+
+.cows {
+    margin:0 5%;
+}
+
+.cows h2{
+    margin-bottom:10px;
+}
+
+.cows a{
+    text-decoration: none;
+}
+
+.cows img:hover{
+    transform: scale(1.05);
+    box-shadow: 5px 5px black; 
+}
+
+/*LAMB PAGE*/
+
+.container4 {
+    position:static;
+    width:100%;
+    height:1100px;
+    overflow:hidden;
+    align-items:center;
+    background-image: url('../images/ourproduce/lambpage/shepherdingsheep.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.lambpage h2{
+    color:white;
+    position:relative;
+    top:20%;
+    left:47.5%;
+}
+
+.lambpage p{
+    width:100%;
+    padding:5px;
+    text-align:center;
+    color:rgb(255, 255, 255);
+    background-color:rgba(0, 0, 0, 0.507);
+    position:relative;
+    top:55%;
+}
+
+/*COW PAGE*/
+
+.container5 {
+    position:static;
+    width:100%;
+    height:1100px;
+    overflow:hidden;
+    align-items:center;
+    background-image: url('../images/ourproduce/cowpage/ngunietc.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.cowpage h2{
+    color:white;
+    position:relative;
+    top:25%;
+    left:50%;
+}
+
+.cowpage p{
+    width:100%;
+    padding:5px;
+    text-align:center;
+    color:rgb(255, 255, 255);
+    background-color:rgba(0, 0, 0, 0.507);
+    position:relative;
+    top:55%;
+}
+
+
+
+
+
+footer {
+    text-align:center;
+    background-color: rgba(139, 109, 79, 0.863);
+    color:white;
+    padding:1%;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer li{
+    display:inline-block;
+}
+
+footer .contactus{
+    display:inline-block;
+    margin-top:2%;
+}
+
+footer .copyright{
+    display:inline-block;
+    padding:0% 5%;
+    padding-bottom:2%;
+}
+
+footer .socials{
+    display:inline-block;
+}
+
+footer h4{
+    font-size:1.1rem;
+    text-decoration: underline;
+    padding-bottom:2px;
+    padding-top:5px;
+}
+
+footer p{
+    padding:3px;
+}
