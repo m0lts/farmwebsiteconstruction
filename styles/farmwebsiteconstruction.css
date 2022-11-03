@@ -291,6 +291,40 @@ nav {
 
 
 /*FARMING SUSTAINABLY*/
+.farmsus {
+    position: relative;
+    top:75px;
+}
+.section1 {
+    background-color: rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+    padding:2%;
+    height:500px;
+}
+.section1 h3{
+    text-align: center;
+    padding-bottom:1%;
+}
+.section1 p {
+    text-align: center;
+}
+.section2 {
+    color: rgb(37, 36, 35);
+    background-color:rgba(245, 245, 245, 0.966);
+    padding:2%;
+    height:500px;
+}
+.section2 h3{
+    text-align: center;
+    padding-bottom:1%;
+}
+.section2 p {
+    text-align: center;
+}
+.midphoto {
+    width:50%;
+    height:auto;
+}
 /*
 .container3 {
     position:static;
