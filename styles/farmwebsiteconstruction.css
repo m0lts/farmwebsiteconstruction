@@ -44,12 +44,12 @@ nav {
         transition: all 1s ease-in-out;
     }
 }
-.cowimg {
+.logo figure {
     width:50px;
     height:auto;
     overflow:hidden;
 }
-.cowimg img {
+.logo figure img {
     max-width:100%;
     height:auto;
     display:block;
@@ -109,10 +109,6 @@ nav {
 }
 }
 /*HOMEPAGE*/
-.homepage {
-    background: rgb(198,164,119);
-    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
-}
 .container1 {
     background-image: url('../images/homepage/sheep.jpg');
     background-position: center;
@@ -124,7 +120,7 @@ nav {
     justify-content: center;
     align-items: center;
     }
-.toptxt {
+.container1 article {
     text-align: center;
     color: rgba(245, 245, 245, 0.966);
     width:fit-content;
@@ -136,7 +132,7 @@ nav {
     border:1px solid rgb(37, 36, 35);
     background-color:rgb(37, 36, 35);
 }
-.enterprises h2 {
+.enterprises header {
     text-align: center;
     color:rgba(245, 245, 245, 0.966);
     text-transform: capitalize;
@@ -149,36 +145,26 @@ nav {
     margin-bottom: 5%;
 }
 .enterpriserow img {
-    width:250px;
+    width:150px;
     height:auto;
-    border-radius:2%;
+    border-radius:50%;
     margin-top:10%;
 }
-.enterpriserow a {
-    text-align: center;
-    text-decoration: none;
-    color:rgba(245, 245, 245, 0.966);
+.enterpriserow figcaption {
+    font-size: 1.1rem;
+    font-weight:600;
     text-transform: uppercase;
-    font-size: 0.9rem;
+    color:rgba(245, 245, 245, 0.966);
+    text-align: center;
+}
+.enterpriserow a {
+    text-decoration: none;
 }
 .sheepent:hover, .cattleent:hover, .arableent:hover {
     -webkit-transform:scale(1.15);
     -ms-transform:scale(1.15);
     transform:scale(1.15);
     transition: all 250ms ease-in;
-}
-@media only screen and (max-width:1024px) {
-    .enterpriserow img {
-        width:200px;
-        border-radius: 5%;
-        transition:all 500ms linear;
-    }
-}
-@media only screen and (max-width:768px) {
-    .enterpriserow img {
-        width:175px;
-        transition:all 500ms linear;
-    }
 }
 @media only screen and (max-width:700px) {
     .enterpriserow {
@@ -191,19 +177,16 @@ nav {
         width:fit-content;
         margin:5% auto;
     }
-    .enterprises h2 {
+    .enterprises header {
         padding-top:5%; 
     }
     .enterpriserow img {
-        width:175px;
-        height:auto;
-        border-radius: 5%;
         margin-top:10%;
         transition:all 500ms linear;
     }
 }
 @media only screen and (max-width:480px) {
-    .enterprises h2 {
+    .enterprises header {
         padding-top:8%; 
     }
 }
@@ -214,28 +197,28 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-.container2 {
+.aboutus figure {
     width:60%;
     height:auto;
     overflow:hidden;
     margin:1%;
 }
-.container2 img {
+.aboutus figure img {
     max-width:100%;
     height:auto;
     display:block;
 }
-.aboutustext {
+.aboutus article {
     width:40%;
     color:rgb(37, 36, 35);
     padding:1%;
     text-align: justify;
 }
-.aboutustext h2 {
+.aboutus article h2 {
     padding-bottom: 1%;
 }
 @media only screen and (max-width:1200px) {
-    .aboutustext {
+    .aboutus article {
         font-size: 0.9rem;
         transition: all 400ms linear;
     }
@@ -245,56 +228,321 @@ nav {
         display:flex;
         flex-direction: column;
     }
-    .aboutustext {
+    .aboutus article {
         width:90%;
         text-align: center;
         padding:3%;
     }
-    .container2 {
+    .aboutus figure {
         width:90%;
         padding-top:3%;
     }
 }
 .gallery {
-    width:95%;
+    background: rgb(198,164,119);
+    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
+    width:100%;
     margin:0 auto;
     padding-bottom:5%;
 }
-.gallery h2 {
+.gallery header {
     text-align: center;
     padding-top:3%;
     padding-bottom: 1%;
     color:rgba(245, 245, 245, 0.966);
 }
-.galleryphotos {
+.gallery figure {
     width:80%;
     height:1000px;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     margin:0 auto;
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
 }
-.galleryphotos img {
+.gallery figure::-webkit-scrollbar {
+    display: none;
+}
+.gallery figure img {
     display:inline-flex;
     padding:0.1%;
     max-width:48%;
     height:auto;
 }
 @media only screen and (max-width:768px) {
-    .gallery h2 {
+    .gallery header {
         padding:5% 0%;
     }
 }
 
-
-
-
 /*FARMING SUSTAINABLY*/
+
 .farmsus {
     position: relative;
     top:75px;
 }
+.wfs {
+    background-color:rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+    padding:3%;
+    padding-bottom: 1%;
+}
+.wfs header {
+    text-align: center;
+    text-transform: capitalize;
+}
+.wfs article {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wfs article figure {
+    text-align: center;
+    margin:5%;
+}
+.wfs article figure i {
+    margin: 10%;
+}
+#carrot {
+    color: rgb(238, 183, 80);
+}
+#seedling {
+    color:rgb(103, 243, 103);
+}
+#earth {
+    color: rgb(108, 179, 245);
+}
+#dove {
+    color:white;
+}
+@media only screen and (max-width:768px) {
+    .wfs header {
+        padding-top:3%;
+        transition: all 250ms linear;
+    }
+    .wfs article {
+        flex-wrap:wrap;
+    }
+}
+.explain {
+    background-color: rgba(245, 245, 245, 0.966);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding:2%;
+}
+.resilient, .health, .earth, .wildlife {
+    margin:1%;
+    width:40%;
+    border-radius: 5px;
+}
+.resilient {
+    color:rgb(37, 36, 35);
+}
+.resilient header {
+    color: rgb(238, 183, 80);
+    text-align: center;
+    padding:2%;
+}
+.resilient article {
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+.resilient figure {
+    width:30%;
+    height:auto;
+    overflow:hidden;
+    margin:0.1%;
+}
+.resilient figure img {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+.resilient figcaption {
+    text-align: center;
+    padding:3%;
+}
+.health {
+    color: rgb(37, 36, 35);
+}
+.health header {
+    color:rgb(103, 243, 103);
+    text-align: center;
+    padding:2%;
+}
+.health article {
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+.health figure {
+    width:70%;
+    height:auto;
+    overflow:hidden;
+    margin:0.1%;
+}
+.health figure img {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+.health figcaption {
+    text-align: center;
+    padding:3%;
+}
+.earth {
+    color: rgb(37, 36, 35);
+    height:fit-content;
+}
+.earth header {
+    color: rgb(108, 179, 245);
+    text-align: center;
+    padding:2%;
+}
+.earth article {
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+.earth figure {
+    width:70%;
+    height:fit-content;
+    overflow:hidden;
+    margin:0.1%;
+}
+.earth figure iframe {
+    margin: 0 auto;
+    max-width:100%;
+    height:300px;
+    display:block;
+}
+.earth figcaption {
+    text-align: center;
+    padding:3%;
+}
+.wildlife {
+    color: rgb(37, 36, 35)
+}
+.wildlife header {
+    color: rgb(37, 36, 35);
+    text-align: center;
+    padding:2%;
+}
+.wildlife article {
+    width:100%;
+    margin:0 auto;
+    display:flex;
+    justify-content: center;
+}
+.wildlife figure {
+    width:60%;
+    height:auto;
+    overflow:hidden;
+}
+.wildlife figure img {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+.wildlife figcaption {
+    text-align: center;
+    padding:3%;
+}
+@media only screen and (max-width:1600px) {
+    .resilient, .health, .earth, .wildlife {
+        width:80%;
+        transition: all 250ms linear;
+    }
+    .wildlife figure img {
+        margin:0 auto;
+    }
+}
+@media only screen and (max-width:1024px) {
+    .resilient, .health, .wildlife, .earth {
+        width:100%;
+        transition: all 250ms linear;
+    }
+    .earth figure {
+        width:60%;
+        transition: all 250ms linear;
+    }
+}
+@media only screen and (max-width:768px) {
+    .earth figure {
+        width:75%;
+        transition: all 250ms linear;
+    }
+}
+@media only screen and (max-width:480px) {
+    .earth figure {
+        width:80%;
+        transition: all 250ms linear;
+    }
+}
+.regenfarm {
+    background: rgb(198,164,119);
+    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
+    color:rgba(245, 245, 245, 0.966);
+}
+.regenfarm header {
+    text-align: center;
+    padding:2%;
+    text-transform: capitalize;
+}
+.covercrops, .mintill, .livint {
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding:1%;
+}
+.mintill {
+    flex-direction: row-reverse;
+}
+.covercrops figure, .mintill figure, .livint figure {
+    width:300%;
+    height:auto;
+    overflow:hidden;
+    border-radius: 10px;
+}
+.covercrops figure img, .mintill figure img, .livint figure img {
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+.covercrops article, .mintill article, .livint article {
+    padding:1%;
+}
+.covercrops article h3, .mintill article h3, .livint article h3 {
+    padding-bottom: 1%;
+}
+@media only screen and (max-width:1024px) {
+    .covercrops article, .mintill article, .livint article {
+        font-size: 0.9rem;
+        transition: all 250ms linear;
+    }
+}
+@media only screen and (max-width:768px) {
+    .covercrops, .mintill, .livint {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .covercrops article, .mintill article, .livint article {
+        text-align: center;
+    }
+    .covercrops figure, .mintill figure, .livint figure {
+        width:100%;
+    }
+}
+/*
 .section1 {
     background-color: rgb(37, 36, 35);
     color:rgba(245, 245, 245, 0.966);
@@ -324,6 +572,9 @@ nav {
 .midphoto {
     width:50%;
     height:auto;
+}
+.fa-solid {
+    color: antiquewhite;
 }
 /*
 .container3 {
