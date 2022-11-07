@@ -9,6 +9,7 @@ html{
 body {
     font-family: 'Signika Negative', sans-serif;
     font-weight: 300;
+    color: rgb(37, 36, 35);
 }
 h1 {
     font-family: 'Dosis', sans-serif;
@@ -109,6 +110,10 @@ nav {
 }
 }
 /*HOMEPAGE*/
+.homepage {
+    position: relative;
+    top:75px;
+}
 .container1 {
     background-image: url('../images/homepage/sheep.jpg');
     background-position: center;
@@ -252,23 +257,21 @@ nav {
     color:rgba(245, 245, 245, 0.966);
 }
 .gallery figure {
-    width:80%;
-    height:1000px;
+    width:50%;
+    height:500px;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     margin:0 auto;
     display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
+    flex-direction: column;
+    gap:5px;
 }
 .gallery figure::-webkit-scrollbar {
     display: none;
 }
 .gallery figure img {
-    display:inline-flex;
-    padding:0.1%;
-    max-width:48%;
+    min-width:100%;
     height:auto;
 }
 @media only screen and (max-width:768px) {
@@ -326,34 +329,72 @@ nav {
         flex-wrap:wrap;
     }
 }
+
 .explain {
     background-color: rgba(245, 245, 245, 0.966);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding:2%;
-}
-.resilient, .health, .earth, .wildlife {
-    margin:1%;
-    width:40%;
-    border-radius: 5px;
+    display:grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    width:100%;
+    height:900px;
+    justify-items: center;
+    align-items: center;
+    gap:2%;
 }
 .resilient {
+    width:50%;
+    grid-area:1 / 1 / 2 / 2;
     color:rgb(37, 36, 35);
+}
+.health {
+    width:50%;
+    grid-area:1 / 2 / 2 / 3;
+    color: rgb(37, 36, 35);
+}
+.earth {
+    width:50%;
+    grid-area:2 / 1 / 3 / 2;
+}
+.wildlife {
+    width:50%;
+    grid-area:2 / 2 / 3 / 3;
 }
 .resilient header {
     color: rgb(238, 183, 80);
+}
+.health header {
+    color:rgb(103, 243, 103);
+}
+.earth header {
+    color: rgb(108, 179, 245);
+}
+.wildlife header {
+    color: rgb(37, 36, 35)
+}
+.resilient header,
+.health header,
+.earth header,
+.wildlife header {
     text-align: center;
     padding:2%;
 }
-.resilient article {
+.resilient article,
+.health article,
+.earth article,
+.wildlife article {
     width:100%;
     margin:0 auto;
     display:flex;
     justify-content: center;
 }
+.resilient figcaption,
+.health figcaption,
+.earth figcaption,
+.wildlife figcaption {
+    text-align: center;
+    padding:3%;
+}
 .resilient figure {
-    width:30%;
+    width:50%;
     height:auto;
     overflow:hidden;
     margin:0.1%;
@@ -363,26 +404,8 @@ nav {
     height:auto;
     display:block;
 }
-.resilient figcaption {
-    text-align: center;
-    padding:3%;
-}
-.health {
-    color: rgb(37, 36, 35);
-}
-.health header {
-    color:rgb(103, 243, 103);
-    text-align: center;
-    padding:2%;
-}
-.health article {
-    width:100%;
-    margin:0 auto;
-    display:flex;
-    justify-content: center;
-}
 .health figure {
-    width:70%;
+    width:100%;
     height:auto;
     overflow:hidden;
     margin:0.1%;
@@ -392,27 +415,8 @@ nav {
     height:auto;
     display:block;
 }
-.health figcaption {
-    text-align: center;
-    padding:3%;
-}
-.earth {
-    color: rgb(37, 36, 35);
-    height:fit-content;
-}
-.earth header {
-    color: rgb(108, 179, 245);
-    text-align: center;
-    padding:2%;
-}
-.earth article {
-    width:100%;
-    margin:0 auto;
-    display:flex;
-    justify-content: center;
-}
 .earth figure {
-    width:70%;
+    width:100%;
     height:fit-content;
     overflow:hidden;
     margin:0.1%;
@@ -420,29 +424,11 @@ nav {
 .earth figure iframe {
     margin: 0 auto;
     max-width:100%;
-    height:300px;
+    height:200px;
     display:block;
 }
-.earth figcaption {
-    text-align: center;
-    padding:3%;
-}
-.wildlife {
-    color: rgb(37, 36, 35)
-}
-.wildlife header {
-    color: rgb(37, 36, 35);
-    text-align: center;
-    padding:2%;
-}
-.wildlife article {
-    width:100%;
-    margin:0 auto;
-    display:flex;
-    justify-content: center;
-}
 .wildlife figure {
-    width:60%;
+    width:90%;
     height:auto;
     overflow:hidden;
 }
@@ -451,39 +437,36 @@ nav {
     height:auto;
     display:block;
 }
-.wildlife figcaption {
-    text-align: center;
-    padding:3%;
-}
 @media only screen and (max-width:1600px) {
     .resilient, .health, .earth, .wildlife {
-        width:80%;
+        width:70%;
         transition: all 250ms linear;
-    }
-    .wildlife figure img {
-        margin:0 auto;
     }
 }
 @media only screen and (max-width:1024px) {
     .resilient, .health, .wildlife, .earth {
-        width:100%;
-        transition: all 250ms linear;
-    }
-    .earth figure {
-        width:60%;
+        width:90%;
         transition: all 250ms linear;
     }
 }
 @media only screen and (max-width:768px) {
     .earth figure {
-        width:75%;
+        width:100%;
         transition: all 250ms linear;
+    }
+    .explain {
+        height:700px;
+        font-size: 0.9rem;
     }
 }
 @media only screen and (max-width:480px) {
     .earth figure {
-        width:80%;
+        width:100%;
         transition: all 250ms linear;
+    }
+    .explain {
+        height: 650px;
+        font-size:0.9rem;
     }
 }
 .regenfarm {
@@ -541,194 +524,81 @@ nav {
     .covercrops figure, .mintill figure, .livint figure {
         width:100%;
     }
+    .regenfarm header {
+        padding:5%;
+    }
 }
-/*
-.section1 {
-    background-color: rgb(37, 36, 35);
-    color:rgba(245, 245, 245, 0.966);
-    padding:2%;
-    height:500px;
-}
-.section1 h3{
-    text-align: center;
-    padding-bottom:1%;
-}
-.section1 p {
-    text-align: center;
-}
-.section2 {
-    color: rgb(37, 36, 35);
-    background-color:rgba(245, 245, 245, 0.966);
-    padding:2%;
-    height:500px;
-}
-.section2 h3{
-    text-align: center;
-    padding-bottom:1%;
-}
-.section2 p {
-    text-align: center;
-}
-.midphoto {
-    width:50%;
-    height:auto;
-}
-.fa-solid {
-    color: antiquewhite;
-}
-/*
-.container3 {
-    position:static;
-    width:100%;
-    height:1000px;
-    overflow:scroll;
-    display:flex;
-    background-image: url('../images/farmingsus/bwmus.jpg');
-    background-repeat: no-repeat;
-    background-position:center;
-}
-
-.wfs {
-    clear:right;
-    float:left;
-    width:40%;
-    margin:4% 0 0 10%;
-    background-color: white;
-    border-radius:5px;
-    padding:5px;
-}
-
-.wfs h3{
-    font-size:2rem;
-    font-family: 'Amatic SC', cursive;
-    color:rgba(94, 54, 2, 0.76)
-}
-
-.wra {
-    clear:left;
-    float:right;
-    width:40%;
-    margin:15% 4% 10% 0;
-    background-color: white;
-    border-radius:5px;
-    padding:5px;
-}
-
-.wra h3{
-    font-size:2rem;
-    font-family: 'Amatic SC', cursive;
-    color:rgba(94, 54, 2, 0.76)
-}
-
-.regenlist h2{
-    text-transform: capitalize;
-    text-align:center;
-    margin:5% 0;
-}
-
-.covercrops {
-    max-height:1000px;
-    min-height:692px;
-    background-color: rgba(181, 240, 163, 0.425);
-}
-
-.covercrops img {
-    float:left;
-    height:100%;
-    max-width:100%;
-    overflow:hidden;
-    padding:1% 1%;
-}
-
-.covercropstext {
-    min-height:17.5%;
-    max-height:70%;
-    width:50%;
-    position:absolute;
-    left:48%;
-    margin-top:20%;
-    background-color: rgb(255, 255, 255);
-    padding:15px;
-    overflow:scroll;
-}
-
-.covercrops h3{
-    padding-bottom:10px;
-    font-size:2rem;
-    font-family: 'Amatic SC', cursive;
-    color:rgba(94, 54, 2, 0.76)
-}
-
-.mintill {
-    max-height:1000px;
-    min-height:692px;
-    background-color: rgba(143, 233, 118, 0.425);
-}
-
-.mintill img{
-    float:right;
-    height:100%;
-    max-width:100%;
-    overflow:hidden;
-    padding:1% 1%;
-}
-
-.mintilltext {
-    min-height:17.5%;
-    max-height:70%;
-    width:50%;
-    position:absolute;
-    right:48%;
-    margin-top:20%;
-    background-color: rgb(255, 255, 255);
-    padding:15px;
-    overflow:scroll;
-}
-
-.mintill h3 {
-    padding-bottom:10px;
-    font-size:2rem;
-    font-family: 'Amatic SC', cursive;
-    color:rgba(94, 54, 2, 0.76)
-}
-
-.livint {
-    max-height:1000px;
-    min-height:692px;
-    background-color: rgba(105, 218, 83, 0.425);
-}
-
-.livint img{
-    float:left;
-    height:100%;
-    max-width:100%;
-    overflow:hidden;
-    padding:1% 1%;
-}
-
-.livinttext {
-    min-height:17.5%;
-    max-height:70%;
-    width:50%;
-    position:absolute;
-    left:48%;
-    margin-top:20%;
-    background-color: rgb(255, 255, 255);
-    padding:15px;
-    overflow:scroll;
-}
-
-.livint h3 {
-    padding-bottom:10px;
-    font-size:2rem;
-    font-family: 'Amatic SC', cursive;
-    color:rgba(94, 54, 2, 0.76)
-}
-
 
 /*OUR PRODUCE*/
+.ourproduce-grid {
+    position: relative;
+    top:75px;
+    display:grid;
+    grid-template: repeat6(1fr) / repeat4(1fr);
+    width:100%;
+    height:1000px;
+}
+.lamb {
+    grid-area: 1 / 1 / 5 / 3;
+    background-color:rgba(245, 245, 245, 0.966);
+}
+.lamb article, .cattle article {
+    text-align: center;
+}
+.lamb figure {
+    width:50%;
+    height:auto;
+    overflow: hidden;
+}
+.lamb figure img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+}
+.cattle {
+    grid-area: 1 / 3 / 5 / 5;
+    background-color:rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+}
+.cattle figure {
+    width:50%;
+    height:auto;
+    overflow: hidden;
+}
+.cattle figure img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+}
+.flex {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lamb h2, .cattle h2, .meat-form h2 { 
+    text-align: center;
+    text-transform: capitalize;
+    padding: 1%;
+}
+.lamb p, .cattle p, .meat-form p {
+    padding: 1%;
+}
+.meat-form p {
+    padding-bottom: 2%;
+}
+.meat-form {
+    grid-area: 5 / 1 / 7 / 5;
+    background: rgb(198,164,119);
+    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
+    text-align: center;
+    padding: 5%;
+}
+
+/*
  .ourproduce {
     padding:0.1%;
+    background: rgb(198,164,119);
+    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
  }
 
 .ourproduce ul {
@@ -849,6 +719,8 @@ nav {
 
 
 footer {
+    position: relative;
+    top:75px;
     background-color: rgb(37, 36, 35);
     color:rgba(245, 245, 245, 0.966);
     width:100%;
