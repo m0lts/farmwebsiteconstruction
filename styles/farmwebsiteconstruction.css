@@ -106,7 +106,7 @@ nav {
         padding:0px;
     }
     .navlist {
-        margin-right:0;
+        margin-right:0.5%;
     }
 }
 /*HOMEPAGE*/
@@ -327,6 +327,13 @@ nav {
     }
     .wfs article {
         flex-wrap:wrap;
+    }
+}
+@media only screen and (max-width:480px) {
+    .wfs article {
+        flex-direction: column;
+        align-content:space-around;
+        justify-content: center;
     }
 }
 
@@ -620,10 +627,11 @@ nav {
     text-align: center;
 }
 #pricelist figure {
-    width:100%;
+    width:80%;
     height:auto;
     overflow: hidden;
     padding-bottom: 2%;
+    margin:0 auto;
     
 }
 #pricelist figure img {
