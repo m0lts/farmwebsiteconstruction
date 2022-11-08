@@ -30,14 +30,6 @@ nav {
     display:flex;
     align-items: center;
 }
-@media only screen and (min-width:768px) {
-    .logo h1 {
-        font-size: 1.8rem;
-        padding-left:5px;
-        color:rgb(37, 36, 35);
-        transition: all 1s ease-in-out;
-    }
-}
 @media only screen and (max-width:768px) {
     .logo h1 {
         color:rgb(37, 36, 35);
@@ -108,6 +100,14 @@ nav {
         color:rgb(184, 147, 99);
         font-weight: 600;
 }
+}
+@media only screen and (max-width:480px) {
+    .navlist li {
+        padding:0px;
+    }
+    .navlist {
+        margin-right:0;
+    }
 }
 /*HOMEPAGE*/
 .homepage {
@@ -452,21 +452,16 @@ nav {
 @media only screen and (max-width:768px) {
     .earth figure {
         width:100%;
+        height: auto;
         transition: all 250ms linear;
     }
     .explain {
-        height:700px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+        height:fit-content;
         font-size: 0.9rem;
-    }
-}
-@media only screen and (max-width:480px) {
-    .earth figure {
-        width:100%;
-        transition: all 250ms linear;
-    }
-    .explain {
-        height: 650px;
-        font-size:0.9rem;
     }
 }
 .regenfarm {
@@ -536,55 +531,55 @@ nav {
     display:grid;
     grid-template: repeat6(1fr) / repeat4(1fr);
     width:100%;
-    height:1000px;
+    height:fit-content;
+    align-content: center;
+}
+@media only screen and (max-width:768px){
+    .ourproduce-grid {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: space-around;
+    }
 }
 .lamb {
     grid-area: 1 / 1 / 5 / 3;
     background-color:rgba(245, 245, 245, 0.966);
-}
-.lamb article, .cattle article {
-    text-align: center;
-}
-.lamb figure {
-    width:50%;
-    height:auto;
-    overflow: hidden;
-}
-.lamb figure img {
-    max-width: 100%;
-    height:auto;
-    display: block;
 }
 .cattle {
     grid-area: 1 / 3 / 5 / 5;
     background-color:rgb(37, 36, 35);
     color:rgba(245, 245, 245, 0.966);
 }
-.cattle figure {
+.lamb article, .cattle article {
+    text-align: center;
+}
+.flex figure {
     width:50%;
     height:auto;
     overflow: hidden;
+    margin:0 auto;
+    border-radius: 5px;
 }
-.cattle figure img {
+.flex figure img {
     max-width: 100%;
     height:auto;
     display: block;
 }
-.flex {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.lamb h2, .cattle h2, .meat-form h2 { 
+.lamb h2, .cattle h2 { 
     text-align: center;
     text-transform: capitalize;
     padding: 1%;
 }
 .lamb p, .cattle p, .meat-form p {
-    padding: 1%;
+    padding: 2%;
+}
+.meat-form h2 {
+    text-align: center;
+    text-transform: capitalize;
 }
 .meat-form p {
-    padding-bottom: 2%;
+    padding-bottom: 1%;
 }
 .meat-form {
     grid-area: 5 / 1 / 7 / 5;
@@ -593,131 +588,51 @@ nav {
     text-align: center;
     padding: 5%;
 }
+.meat-form input {
+    border: none;
+    background-color:rgba(245, 245, 245, 0.966);
+    border-radius: 5px;
+    margin:5px;
+    padding:3px;
+}
+#submit {
+    text-transform: capitalize;
+    background-color:rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+}
+#submit:hover {
+    text-transform: capitalize;
+    background-color:rgb(96, 182, 74);
+    color:rgba(245, 245, 245, 0.966);
+}
+#submit:visited {
+    text-transform: capitalize;
+    background-color:rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+}
 
-/*
- .ourproduce {
-    padding:0.1%;
-    background: rgb(198,164,119);
-    background: linear-gradient(135deg, rgba(198,164,119,0.5550595238095238) 0%, rgba(144,112,70,1) 100%);
- }
-
-.ourproduce ul {
+#pricelist {
+    background:rgb(37, 36, 35);
+    color:rgba(245, 245, 245, 0.966);
+}
+#pricelist h2 {
+    padding:2%;
     text-align: center;
-    margin:5% auto;
-    width:80%;
 }
-
-.ourproduce li {
-    display: inline-block;
-}
-
-.ourproduce img {
-    max-width:100%;
-    height:100%;
-    margin-bottom:10%;
-}
-
-.lambs{
-    margin:0 5%;
-    padding-bottom:0.5%;
-}
-
-.lambs h2{
-    margin-bottom:10px;
-}
-
-.lambs a{
-    text-decoration: none;
-}
-
-.lambs img:hover{
-    transform: scale(1.05);
-    box-shadow: 5px 5px black;
-}
-
-.cows {
-    margin:0 5%;
-}
-
-.cows h2{
-    margin-bottom:10px;
-}
-
-.cows a{
-    text-decoration: none;
-}
-
-.cows img:hover{
-    transform: scale(1.05);
-    box-shadow: 5px 5px black; 
-}
-
-/*LAMB PAGE*/
-
-.container4 {
-    position:static;
+#pricelist figure {
     width:100%;
-    height:1100px;
-    overflow:hidden;
-    align-items:center;
-    background-image: url('../images/ourproduce/lambpage/shepherdingsheep.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
+    height:auto;
+    overflow: hidden;
+    padding-bottom: 2%;
+    
 }
-
-
-.lambpage h2{
-    color:white;
-    position:relative;
-    top:20%;
-    left:47.5%;
+#pricelist figure img {
+    max-width: 100%;
+    height:auto;
+    display: block;
+    border-radius: 5px;
+    margin:0 auto;
 }
-
-.lambpage p{
-    width:100%;
-    padding:5px;
-    text-align:center;
-    color:rgb(255, 255, 255);
-    background-color:rgba(0, 0, 0, 0.507);
-    position:relative;
-    top:55%;
-}
-
-/*COW PAGE*/
-
-.container5 {
-    position:static;
-    width:100%;
-    height:1100px;
-    overflow:hidden;
-    align-items:center;
-    background-image: url('../images/ourproduce/cowpage/ngunietc.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-
-.cowpage h2{
-    color:white;
-    position:relative;
-    top:25%;
-    left:50%;
-}
-
-.cowpage p{
-    width:100%;
-    padding:5px;
-    text-align:center;
-    color:rgb(255, 255, 255);
-    background-color:rgba(0, 0, 0, 0.507);
-    position:relative;
-    top:55%;
-}
-
-
-
-
-
 footer {
     position: relative;
     top:75px;
